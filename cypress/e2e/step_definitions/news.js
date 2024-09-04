@@ -28,6 +28,7 @@ Then("the user open the first post about {string}", (postText) => {
 });
 
 Then("the user verifys the Title and subscribe to the newsletter unsing the mail {string}", (email) => {
+  articlePage.veryfyTitle()
   articlePage.subscribeByEmail(email)
 });
 

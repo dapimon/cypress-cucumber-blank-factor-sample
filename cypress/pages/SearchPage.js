@@ -12,7 +12,7 @@ class SearchPage {
   })
   }
   verifyUrl(search){
-    url = `https://hipertextual.com/?s=${search.trim().replaceAll(" ","+")}`
+    let url = `https://hipertextual.com/?s=${search.trim().replaceAll(" ","+")}`
     cy.url()
       .should('be.equal', url)
   }

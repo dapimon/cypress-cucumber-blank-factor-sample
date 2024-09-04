@@ -8,7 +8,7 @@ Feature: NewsLetter page
     Scenario: Success Test
         When A user search for "Steve Jobs" and clicks on the search button
         And Scroll down to the first post about "Reed Jobs" and saves the Title
-        Then the user check the url for the search of "Reed Jobs"
+        Then the user check the url for the search of "Steve Jobs"
         And the user open the first post about "Reed Jobs"
         And the user verifys the Title and subscribe to the newsletter unsing the mail "ejempl@mail.com"
     
