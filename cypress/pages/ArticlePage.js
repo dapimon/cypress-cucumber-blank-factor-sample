@@ -18,6 +18,7 @@ class ArticlePage {
     this.elements.suscriptionContainer().scrollIntoView()
     this.elements.suscriptionInput().scrollIntoView().type(email)
     this.elements.suscriptionButton().click()
+    cy.wait(500)
     this.elements.suscriptionMessage().should('have.class', 'success').should('contain',this.subscriptionSuccessMessage )
   }
 

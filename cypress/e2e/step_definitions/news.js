@@ -6,6 +6,7 @@ import {
 import {homePage} from '@pages/HomePage'
 import {searchPage} from '@pages/SearchPage'
 import {articlePage} from '@pages/ArticlePage'
+import {newsletterPage} from '@pages/NewsletterPage'
 
 Given("A web browser is at the newsletter Page", () => {
   cy.visit("/");
@@ -27,8 +28,16 @@ Then("the user open the first post about {string}", (postText) => {
       
 });
 
-Then("the user verifys the Title and subscribe to the newsletter unsing the mail {string}", (email) => {
+Then("the user verifys the Title", () => {
   articlePage.veryfyTitle()
-  articlePage.subscribeByEmail(email)
+});
+
+
+When("A user navigates to the NewsLetter tab", () =>{
+homePage.navigateToNewsletter()
+});
+
+Then("He Subscribes to the NewsLetter using the mail {string}", () => {
+  newsletterPage.subscribeByEmail()
 });
 
